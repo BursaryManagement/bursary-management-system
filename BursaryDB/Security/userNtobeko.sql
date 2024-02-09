@@ -1,0 +1,5 @@
+CREATE USER [userNtobeko] WITHOUT LOGIN;
+
+
+GO
+

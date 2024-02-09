@@ -1,0 +1,5 @@
+CREATE USER [userManqoba] WITHOUT LOGIN;
+
+
+GO
+

@@ -1,0 +1,5 @@
+CREATE USER [userNdzalama] WITHOUT LOGIN;
+
+
+GO
+
