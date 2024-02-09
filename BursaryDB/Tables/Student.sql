@@ -7,7 +7,7 @@ CREATE TABLE [dbo].[Student]
   [ContactNumber] CHAR(10) NOT NULL,
   [StudentEmail] VARCHAR(100) NOT NULL,
   [DateOfBirth] DATE NOT NULL,
-  [CONSTRAINT] PK_StudentID
+  CONSTRAINT [PK_StudentID]
     PRIMARY KEY CLUSTERED (StudentID)
 )
 
