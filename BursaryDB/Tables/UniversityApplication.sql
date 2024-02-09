@@ -6,3 +6,4 @@ CREATE TABLE [dbo].[UniversityApplication]
   [ApplicationStatusReason] VARCHAR(300) DEFAULT ''
 )
 GO
+
