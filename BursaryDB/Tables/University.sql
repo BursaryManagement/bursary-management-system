@@ -5,4 +5,4 @@ CREATE TABLE [dbo].[University]
   [AmountAllocated] MONEY NOT NULL DEFAULT 0,
   [RemainingAmount] MONEY  NOT NULL DEFAULT 0
 )
-GO
+
