@@ -5,7 +5,7 @@ CREATE TABLE [dbo].[StudentBursaryApplication]
   [ApplicationRejectionReason] TEXT DEFAULT '',
   [BursaryAmount] MONEY NOT NULL,
   [StudentID] VARCHAR(13) NOT NULL UNIQUE,
-  [StatusID] INT NOT NULL UNIQUE
+  [StatusID] INT NOT NULL
 )
 GO
 
