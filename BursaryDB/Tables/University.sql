@@ -5,4 +5,9 @@ CREATE TABLE [dbo].[University]
   [AmountAllocated] MONEY NOT NULL DEFAULT 0,
   [RemainingAmount] MONEY  NOT NULL DEFAULT 0
 )
+GO
 
+ALTER TABLE [dbo].[University]
+  ADD CONSTRAINT [CHK_University_AmountAllocated]
+      CHECK ([dbo].[udfCalculateTotalAmountAllocated]([UniversityID]) + [AmountAllocated] <= [dbo].[udfTotalBursaryAmount]())
+GO
