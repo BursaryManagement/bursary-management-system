@@ -6,3 +6,8 @@ CREATE TABLE [dbo].[StudentBursaryApplication]
   [BursaryAmount] MONEY NOT NULL,
   [StudentID] VARCHAR(13) NOT NULL
 )
+
+ALTER TABLE [dbo].[StudentBursaryApplication] 
+  ADD CONSTRAINT [FK_StudentBursaryApplication_Student_StudentID]
+  FOREIGN KEY (StudentID)
+  REFERENCES Student([StudentID])
