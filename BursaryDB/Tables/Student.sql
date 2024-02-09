@@ -7,8 +7,13 @@ CREATE TABLE [dbo].[Student]
   [ContactNumber] CHAR(10) NOT NULL,
   [StudentEmail] VARCHAR(100) NOT NULL,
   [DateOfBirth] DATE NOT NULL,
+  [RaceID] INT,
   CONSTRAINT [PK_Student]
-    PRIMARY KEY CLUSTERED (StudentID)
+    PRIMARY KEY CLUSTERED (StudentID),
+  CONSTRAINT [FK_Race]
+    FOREIGN KEY (RaceID)
+    REFERENCES Race(RaceID)
+
 )
 
---TODO: Add gender/sex, RaceID, UniversityID, and DepartmentID
+--TODO: Add UniversityID, and DepartmentID
