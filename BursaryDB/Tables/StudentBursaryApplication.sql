@@ -2,23 +2,10 @@ CREATE TABLE [dbo].[StudentBursaryApplication]
 (
   [ApplicationID] INT IDENTITY NOT NULL PRIMARY KEY,
   [ApplicationMotivation] TEXT NOT NULL,
-  [ApplicationRejectionReason] TEXT DEFAULT '',
+  [ApplicationRejectionReason] TEXT NOT NULL DEFAULT 'N/A',
   [BursaryAmount] MONEY NOT NULL,
-  [ApplicationDate] DATE NOT NULL,
-  [StudentID] INT NOT NULL UNIQUE,
-  [StatusID] INT NOT NULL
+  [StudentID] VARCHAR(13) NOT NULL UNIQUE,
+  [StatusID] INT NOT NULL DEFAULT 2,
+  [ApplicationDate] DATE NOT NULL DEFAULT GETDATE(),
 )
-GO
-
-
-ALTER TABLE [dbo].[StudentBursaryApplication] 
-  ADD CONSTRAINT [FK_StudentBursaryApplication_Student_StudentID]
-      FOREIGN KEY ([StudentID])
-      REFERENCES [dbo].[Student]([StudentID])
-GO
-
-ALTER TABLE [dbo].[StudentBursaryApplication] 
-  ADD CONSTRAINT [FK_StudentBursaryApplication_ApplicationStatus_StatusID]
-      FOREIGN KEY ([StatusID])
-      REFERENCES [dbo].[ApplicationStatus]([StatusID])
 GO
