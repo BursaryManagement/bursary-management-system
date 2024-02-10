@@ -1,5 +1,0 @@
-CREATE USER [userBulelani] WITHOUT LOGIN;
-
-
-GO
-
