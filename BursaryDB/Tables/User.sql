@@ -16,11 +16,11 @@ ADD CONSTRAINT FK_UserRole FOREIGN KEY([UserRoleID]) REFERENCES [dbo].[UserRole]
 GO
 
 ALTER TABLE [dbo].[User]
-ADD CONSTRAINT FK_UserRole FOREIGN KEY([GenderID]) REFERENCES [dbo].[Gender]
+ADD CONSTRAINT FK_UserGender FOREIGN KEY([GenderID]) REFERENCES [dbo].[Gender]
 GO
 
 ALTER TABLE [dbo].[User]
-ADD CONSTRAINT FK_UserRole FOREIGN KEY([ContactID]) REFERENCES [dbo].[Contact]
+ADD CONSTRAINT FK_UserContact FOREIGN KEY([ContactID]) REFERENCES [dbo].[Contact]
 GO
 
 
