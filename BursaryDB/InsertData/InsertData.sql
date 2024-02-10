@@ -16,6 +16,11 @@ INSERT INTO dbo.University (UniversityName)
 VALUES ('University of Cape Town'), ('University of the Witwatersrand'), ('University of Pretoria'), ('University of Johannesburg'), ('University of KwaZulu-Natal'), ('University of the Western Cape');
 GO
 
+-- Insert into the ApplicationStatus table
+INSERT INTO dbo.ApplicationStatus (Status)
+VALUES ('Accepted'), ('Review'), ('Rejected');
+GO
+     
 -- Insert into UniversityApplication
 INSERT INTO dbo.UniversityApplication (UniversityID, Motivation)
 VALUES
@@ -51,11 +56,6 @@ GO
 -- Insert bursary details into the BursaryDetails table
 INSERT INTO dbo.BursaryDetails (Year, TotalAmount, CapAmountPerStudent)
 VALUES (2024, 3000000, 125000);
-GO
-
--- Insert into the ApplicationStatus table
-INSERT INTO dbo.ApplicationStatus (Status)
-VALUES ('Accepted'), ('Review'), ('Rejected');
 GO
 
 -- Insert contact details into the Contact table
