@@ -8,7 +8,7 @@
     <ModelCollation>1033, CI</ModelCollation>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="InsertData" />
+   
     <Folder Include="Procedures" />
     <Folder Include="ScalarFunctions" />
     <Folder Include="Tables" />
