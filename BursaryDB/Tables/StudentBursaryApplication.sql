@@ -6,6 +6,6 @@ CREATE TABLE [dbo].[StudentBursaryApplication]
   [BursaryAmount] MONEY NOT NULL,
   [StudentID] VARCHAR(13) NOT NULL UNIQUE,
   [StatusID] INT NOT NULL DEFAULT 2,
-  [ApplicationDate] DATE NOT NULL DEFAULT GETDATE(),
+  [ApplicationDate] DATE NOT NULL DEFAULT GETDATE()
 )
 GO
