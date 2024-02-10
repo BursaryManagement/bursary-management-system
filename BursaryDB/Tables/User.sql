@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[User]
   [DateOfBirth] DATE NOT NULL,
   [IDNumber] CHAR(13) NOT NULL,
   [GenderID] INT NOT NULL,
-  [ContactID] CHAR(10) NOT NULL,
+  [ContactID] INT NOT NULL,
   [UserRoleID] INT NOT NULL,
   [IsUserActive] BIT NOT NULL DEFAULT 1,
 )
