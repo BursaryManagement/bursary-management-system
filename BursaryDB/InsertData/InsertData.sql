@@ -3,15 +3,16 @@ GO
 
 INSERT INTO dbo.Department (DepartmentName)
 VALUES
-('Computer Science'),
-('Computer Engineering'),
-('Computer Game Design'),
-('Software Engineering'),
-('Data Science'),
-('Artificial Intelligence'),
-('Cybersecurity'),
-('Information Systems');
+('Computer Science');
 GO
+-- ,
+-- ('Computer Engineering'),
+-- ('Computer Game Design'),
+-- ('Software Engineering'),
+-- ('Data Science'),
+-- ('Artificial Intelligence'),
+-- ('Cybersecurity'),
+-- ('Information Systems');
 
 -- INSERT INTO dbo.University (UniversityName)
 -- VALUES ('University of Cape Town'), ('University of the Witwatersrand'), ('University of Pretoria'), ('University of Johannesburg'), ('University of KwaZulu-Natal'), ('University of the Western Cape');
