@@ -1,3 +1,6 @@
+USE BursaryDB;
+GO
+
 INSERT INTO dbo.Department (DepartmentName)
 VALUES
 ('Computer Science'),
