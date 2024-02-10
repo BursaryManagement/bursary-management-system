@@ -3,12 +3,11 @@ CREATE TABLE [dbo].[User]
   [UserID] INT IDENTITY(1,1) PRIMARY KEY NOT NULL ,
   [FirstName] VARCHAR(50) NOT NULL,
   [LastName] VARCHAR(120) NOT NULL,
-  [DateOfBirth] DATE NOT NULL,
   [IDNumber] CHAR(13) NOT NULL,
   [GenderID] INT NOT NULL,
   [ContactID] INT NOT NULL,
   [UserRoleID] INT NOT NULL,
-  [IsUserActive] BIT NOT NULL DEFAULT 1,
+  [IsUserActive] BIT NOT NULL DEFAULT 1
 )
 GO
 
