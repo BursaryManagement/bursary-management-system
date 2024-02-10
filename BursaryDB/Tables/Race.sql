@@ -5,3 +5,4 @@ CREATE TABLE [dbo].[Race]
   CONSTRAINT [PK_Race]
     PRIMARY KEY CLUSTERED (RaceID ASC)
 )
+GO
