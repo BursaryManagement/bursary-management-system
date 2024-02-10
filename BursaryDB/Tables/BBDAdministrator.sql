@@ -5,4 +5,3 @@ CREATE TABLE [dbo].[BBDAdministrator]
 )
 GO
 
-ALTER TABLE [dbo].[BBDAdministrator]
