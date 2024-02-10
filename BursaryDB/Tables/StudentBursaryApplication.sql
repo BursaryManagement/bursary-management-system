@@ -9,3 +9,8 @@ CREATE TABLE [dbo].[StudentBursaryApplication]
   [ApplicationDate] DATE NOT NULL DEFAULT GETDATE()
 )
 GO
+
+
+ALTER TABLE [dbo].[StudentBursaryApplication]
+  ADD CONSTRAINT [FK_StudentID_Application] FOREIGN KEY([StudentID]) REFERENCES [dbo].[Student](StudentID)
+GO
