@@ -1,6 +1,8 @@
 CREATE TABLE [dbo].[BursaryDetails]
 (
-  TotalAmount MONEY NOT NULL DEFAULT 0,
-  CapAmountPerStudent MONEY NOT NULL DEFAULT 0,
-  MinAverageMarkRequired INT NOT NULL DEFAULT 0
-)
+  [BursaryDetailsID] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+  [Year] INT NOT NULL,
+  [TotalAmount] MONEY NOT NULL,
+  [CapAmountPerStudent] MONEY NOT NULL
+);
+GO
