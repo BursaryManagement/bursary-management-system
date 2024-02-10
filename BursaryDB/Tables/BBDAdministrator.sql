@@ -4,3 +4,5 @@ CREATE TABLE [dbo].[BBDAdministrator]
   [UserID] INT NOT NULL
 )
 GO
+
+ALTER TABLE [dbo].[BBDAdministrator]
