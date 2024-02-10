@@ -11,3 +11,8 @@ CREATE TABLE [dbo].[User]
 )
 GO
 
+ALTER TABLE [dbo].[User]
+ADD CONSTRAINT FK_UserRole FOREIGN KEY([UserRoleID]) REFERENCES [dbo].[UserRole]
+GO
+
+

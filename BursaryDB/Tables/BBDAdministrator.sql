@@ -5,3 +5,10 @@ CREATE TABLE [dbo].[BBDAdministrator]
 )
 GO
 
+ALTER TABLE [dbo].[BBDAdministrator]
+ADD CONSTRAINT UQ_AdminID UNIQUE(UserID)
+GO
+
+ALTER TABLE [dbo].[BBDAdministrator]
+ADD CONSTRAINT [FK_UserID] FOREIGN KEY([UserID]) REFERENCES [dbo].[User]
+GO
