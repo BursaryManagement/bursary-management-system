@@ -77,28 +77,13 @@ VALUES
 (14, '0714567890', 'mia.miller@gmail.com');
 GO
 
--- Create users and Insert into the UserRole table
-CREATE ROLE [db_bbd_admin] AUTHORIZATION [dbo];
-CREATE ROLE [db_hod] AUTHORIZATION [dbo];
-CREATE ROLE [db_student] AUTHORIZATION [dbo];
-GO
+-- Insert into the UserRole table
 
 INSERT INTO [dbo].[UserRole] ([Role]) 
 VALUES 
 ('db_bbd_admin'),
 ('db_hod'),
 ('db_student');
-GO
-
-GRANT ALL TO [db_bbd_admin];
-GRANT SELECT, INSERT, UPDATE ON [dbo].[Student] TO [db_hod];
-GRANT SELECT ON [dbo].[YearlyUniversityAllocation] TO [db_hod];
-GRANT SELECT ON [dbo].[YearlyStudentAllocation] TO [db_hod];
-GRANT SELECT, UPDATE ON [dbo].[University] TO [db_hod];
-GRANT SELECT, INSERT, UPDATE ON [dbo].[StudentBursaryApplication] TO [db_hod];
-GRANT SELECT, INSERT, UPDATE ON [dbo].[StudentBursaryDocuments] TO [db_hod];
-GRANT SELECT, INSERT, UPDATE ON [dbo].[Department] TO [db_hod];
-GRANT INSERT ON [dbo].[StudentBursaryDocuments] TO [db_student];
 GO
 
 -- Insert users into the User table
@@ -151,4 +136,3 @@ VALUES ('I am a hardworking student who is in need of financial assistance', 500
        ('I am a driven student who is in need of financial assistance', 25000, 5),
        ('I am a focused student who is in need of financial assistance', 30000, 6);
 GO
-
