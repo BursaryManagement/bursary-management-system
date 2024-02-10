@@ -10,13 +10,17 @@ GO
 ALTER TABLE [dbo].[HeadOfDepartment]
   ADD CONSTRAINT [FK_HeadOfDepartment_Department_DepartmentID] 
       FOREIGN KEY ([DepartmentID]) 
-      REFERENCES [dbo].[Department]([DepartmentID]),
+      REFERENCES [dbo].[Department]([DepartmentID])
+GO
 
-      CONSTRAINT [FK_HeadOfDepartment_University_UniversityID]
+ALTER TABLE [dbo].[HeadOfDepartment]
+    ADD CONSTRAINT [FK_HeadOfDepartment_University_UniversityID]
       FOREIGN KEY ([UniversityID])
-      REFERENCES [dbo].[University]([UniversityID]),
+      REFERENCES [dbo].[University]([UniversityID])
+GO
 
-      CONSTRAINT [FK_HeadOfDepartment_User_UserID]
+ALTER TABLE [dbo].[HeadOfDepartment]
+    ADD  CONSTRAINT [FK_HeadOfDepartment_User_UserID]
       FOREIGN KEY ([UserID])
       REFERENCES [dbo].[User]([UserID])
 GO
