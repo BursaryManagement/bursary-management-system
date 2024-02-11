@@ -22,12 +22,12 @@ Ensure you have the following components before setting up the database:
     - Launch the SQL Server Management Studio and connect to your local SQL Server instance
 
 3. **Initialising the database**
-<br>
- _To create the database and all it tables:_ 
-    <br>
-    - Navigate to the directory where you cloned the repo, inside the ```initialisation``` folder, locate the ```create_database_objects.sql``` file and open the file with the SQL Management Server.
-    <br>
-    - Execute the script you opened and it will create all the tables,functionc,views and stored procedures in the database
+
+     _To create the database and all it tables:_
+        
+        -  Navigate to the directory where you cloned the repo, inside the ```initialisation``` folder, locate the ```create_database_objects.sql``` file and open the file with the SQL Management Server.
+        
+        - Execute the script you opened and it will create all the tables,functionc,views and stored procedures in the database
 
 ## Acknowledgments
 - Brilliant Makhoba
