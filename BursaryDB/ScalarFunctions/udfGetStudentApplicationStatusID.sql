@@ -11,3 +11,4 @@ AS
     WHERE [ApplicationID] = @ApplicationID
     RETURN @StatusID
 END
+GO
