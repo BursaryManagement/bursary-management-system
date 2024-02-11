@@ -3,7 +3,7 @@ BBD bursary management system database design repository
 
 <br />
 
-## Database Planing and Design
+## Database Planning and Design
 The table below lists the functionalities that each role player can perform on the Databasa
 
 | BBD Software | University |
