@@ -16,7 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="InsertData.sql" />
-    <None Include="ScalarFunctions\udfGetStudentApplicationStatusID.sql" />
+    <PostDeploy Include="ScalarFunctions\udfGetStudentApplicationStatusID.sql" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
