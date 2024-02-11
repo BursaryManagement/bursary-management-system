@@ -19,7 +19,7 @@
     <PostDeploy Include="InsertData.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PreDeploy Include="DBInit\DropConstraints.sql" />
+    <None Include="DBInit\DropConstraints.sql" />
     <PreDeploy Include="DBInit\DropTables.sql" />
   </ItemGroup>
   <Target Name="BeforeBuild">
