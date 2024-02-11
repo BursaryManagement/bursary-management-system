@@ -1,7 +1,7 @@
 # Bursary Management Database System
 
 ## Overview
-The database facilitates funding requests from higher learning institutions on behalf of students. It enables the management of funding allocations by the funder and supports the approval or rejection of funding requests.The funding requests are made my the head of departments of the institutions and the funding approvals/rejects are handled by selected members of the funder.
+The database facilitates funding requests from higher learning institutions on behalf of students. It enables the management of funding allocations by the funder and supports the approval or rejection of funding requests. Funding requests are initiated by the heads of departments of the institutions, and the approvals/rejections are handled by selected members of the funder.
 
 
 ## Getting started
