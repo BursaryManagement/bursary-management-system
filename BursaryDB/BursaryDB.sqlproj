@@ -17,6 +17,7 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="InsertData.sql" />
+    <None Include="ScalarFunctions\udfGetUniversityRemainingAmount.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="DBInit\DropTables.sql" />
