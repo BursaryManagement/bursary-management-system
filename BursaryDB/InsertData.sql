@@ -31,7 +31,9 @@ VALUES
 (5, 'As a university that values excellence, we support our top-performing students by providing bursaries. Their achievements inspire us, and we are committed to helping them thrive.'),
 (6, 'Our university celebrates academic brilliance. By offering bursaries, we aim to empower our dedicated students to continue their educational journey with confidence.');
 GO
-
+INSERT INTO dbo.BursaryDetails (Year, TotalAmount, CapAmountPerStudent)
+VALUES (2024, 3000000, 125000);
+GO
 INSERT INTO dbo.YearlyUniversityAllocation (UniversityID, AllocatedAmount, DateAllocated)
 VALUES
 (1, 100000, '2024-01-01'),
@@ -50,9 +52,7 @@ INSERT INTO [dbo].[Race] (RaceName)
 VALUES ('Black'), ('Indian'), ('Coloured');
 GO
 
-INSERT INTO dbo.BursaryDetails (Year, TotalAmount, CapAmountPerStudent)
-VALUES (2024, 3000000, 125000);
-GO
+
 
 INSERT INTO dbo.Contact (ContactID, ContactNumber, Email)
 VALUES
