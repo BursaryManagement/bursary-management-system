@@ -26,7 +26,7 @@ AS
       COMMIT TRANSACTION
     END TRY
     BEGIN CATCH
-          EXEC [dbo].[uspGetErrorIndfo]
+          EXEC [dbo].[uspGetErrorInfo]
           ROLLBACK TRANSACTION
     END CATCH
 
