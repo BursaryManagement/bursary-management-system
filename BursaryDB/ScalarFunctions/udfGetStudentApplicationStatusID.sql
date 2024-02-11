@@ -1,4 +1,4 @@
-ALTER FUNCTION [dbo].[udfGetStudentApplicationStatusID]
+CREATE FUNCTION [dbo].[udfGetStudentApplicationStatusID]
   (
     @ApplicationID INT
   )
