@@ -8,6 +8,7 @@
     <ModelCollation>1033, CI</ModelCollation>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="DBInit" />
     <Folder Include="Procedures" />
     <Folder Include="ScalarFunctions" />
     <Folder Include="Tables" />
@@ -16,6 +17,10 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="InsertData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="DBInit\DropConstraints.sql" />
+    <PreDeploy Include="DBInit\DropTables.sql" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
