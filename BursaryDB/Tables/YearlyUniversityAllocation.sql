@@ -12,3 +12,8 @@ ALTER TABLE [dbo].[YearlyUniversityAllocation]
       FOREIGN KEY ([UniversityID])
       REFERENCES [dbo].[University]([UniversityID])
 GO
+
+ALTER TABLE [dbo].[YearlyUniversityAllocation]
+    ADD CONSTRAINT [CHK_YearlyUniversityAllocation_AllocatedAmount]
+        CHECK ([dbo].[udfTotalYearlyUniversityAmountAllocated](GETDATE()) + [AllocatedAmount] <= [dbo].[udfTotalAmountForYear] (Year([DateAllocated])))
+GO

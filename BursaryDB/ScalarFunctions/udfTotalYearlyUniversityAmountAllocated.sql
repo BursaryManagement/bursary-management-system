@@ -30,7 +30,3 @@ END
 GO
 
 
-ALTER TABLE [dbo].[YearlyUniversityAllocation]
-    ADD CONSTRAINT [CHK_YearlyUniversityAllocation_AllocatedAmount]
-        CHECK ([dbo].[udfTotalYearlyUniversityAmountAllocated](GETDATE()) + [AllocatedAmount] <= [dbo].[udfTotalAmountForYear] (Year([DateAllocated])))
-GO
