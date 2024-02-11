@@ -5,7 +5,6 @@ CREATE PROCEDURE [dbo].[uspCreateStudentWithApplication]
   @GenderID INT,
   @ContactNumber CHAR(10),
   @Email VARCHAR(100),
-  @ContactID INT,
   @UserRoleID INT,
   @AverageMark INT,
   @RaceID INT,
