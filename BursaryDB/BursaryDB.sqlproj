@@ -14,6 +14,9 @@
     <Folder Include="TableValuedFunctions" />
     <Folder Include="Views" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="InsertData.sql" />
+  </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
