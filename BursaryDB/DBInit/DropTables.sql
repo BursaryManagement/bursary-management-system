@@ -1,76 +1,126 @@
 -- This file contains SQL statements that will be executed before the build script.
 -- Write your own SQL object definition here, and it'll be included in your package.
 -- Write your own SQL object definition here, and it'll be included in your package.
-ALTER TABLE [dbo].[BBDAdministrator]
-DROP CONSTRAINT IF EXISTS UQ_AdminID 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BBDAdministrator]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[BBDAdministrator]
+  DROP CONSTRAINT IF EXISTS UQ_AdminID 
+END
 GO
 
-ALTER TABLE [dbo].[BBDAdministrator]
-DROP CONSTRAINT IF EXISTS [FK_UserID]  
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BBDAdministrator]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[BBDAdministrator]
+  DROP CONSTRAINT IF EXISTS [FK_UserID]  
+END
 GO
 
-ALTER TABLE [dbo].[HeadOfDepartment]
-  DROP CONSTRAINT IF EXISTS [FK_HeadOfDepartment_Department_DepartmentID] 
-      
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HeadOfDepartment]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[HeadOfDepartment]
+    DROP CONSTRAINT IF EXISTS [FK_HeadOfDepartment_Department_DepartmentID] 
+END      
 GO
 
-ALTER TABLE [dbo].[HeadOfDepartment]
-    DROP CONSTRAINT IF EXISTS [FK_HeadOfDepartment_University_UniversityID]
-     
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HeadOfDepartment]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[HeadOfDepartment]
+      DROP CONSTRAINT IF EXISTS [FK_HeadOfDepartment_University_UniversityID]
+END     
 GO
 
-ALTER TABLE [dbo].[HeadOfDepartment]
-    DROP  CONSTRAINT IF EXISTS [FK_HeadOfDepartment_User_UserID]
-      
-
-ALTER TABLE [dbo].[Student]
-DROP CONSTRAINT IF EXISTS [F_KUserID] 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HeadOfDepartment]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[HeadOfDepartment]
+      DROP  CONSTRAINT IF EXISTS [FK_HeadOfDepartment_User_UserID]
+END      
 GO
 
-ALTER TABLE [dbo].[Student]
-DROP CONSTRAINT IF EXISTS [F_KRace] 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Student]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[Student]
+  DROP CONSTRAINT IF EXISTS [F_KUserID] 
+END
 GO
 
-ALTER TABLE [dbo].[Student]
-DROP CONSTRAINT IF EXISTS [F_KDepartmentID] 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Student]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[Student]
+  DROP CONSTRAINT IF EXISTS [F_KRace] 
+END
 GO
 
-ALTER TABLE [dbo].[StudentBursaryApplication]
-  DROP CONSTRAINT IF EXISTS [FK_StudentID_Application] 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Student]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[Student]
+  DROP CONSTRAINT IF EXISTS [F_KDepartmentID] 
+END
 GO
 
-ALTER TABLE [dbo].[StudentBursaryDocuments]
-  DROP CONSTRAINT IF EXISTS [FK_StudentBursaryDocuments_StudentBursaryApplication_ApplicationID]
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentBursaryApplication]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[StudentBursaryApplication]
+    DROP CONSTRAINT IF EXISTS [FK_StudentID_Application] 
+END
 GO
 
-ALTER TABLE [dbo].[UniversityApplication]
-DROP CONSTRAINT IF EXISTS [FK_UniversityID]
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentBursaryDocuments]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[StudentBursaryDocuments]
+    DROP CONSTRAINT IF EXISTS [FK_StudentBursaryDocuments_StudentBursaryApplication_ApplicationID]
+END
 GO
 
-ALTER TABLE [dbo].[UniversityApplication]
-DROP CONSTRAINT IF EXISTS [FK_StatusID] 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UniversityApplication]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[UniversityApplication]
+  DROP CONSTRAINT IF EXISTS [FK_UniversityID]
+END
+GO
+
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UniversityApplication]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[UniversityApplication]
+  DROP CONSTRAINT IF EXISTS [FK_StatusID] 
+END
 GO
 
 
-ALTER TABLE [dbo].[User]
-DROP CONSTRAINT IF EXISTS FK_UserRole 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[User]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[User]
+  DROP CONSTRAINT IF EXISTS FK_UserRole 
+END
 GO
 
-ALTER TABLE [dbo].[User]
-DROP CONSTRAINT IF EXISTS FK_Gender
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[User]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[User]
+  DROP CONSTRAINT IF EXISTS FK_Gender
+END
 GO
 
-ALTER TABLE [dbo].[User]
-DROP CONSTRAINT IF EXISTS FK_Contact 
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[User]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[User]
+  DROP CONSTRAINT IF EXISTS FK_Contact 
+END
 GO
 
-ALTER TABLE [dbo].[YearlyStudentAllocation]
-  DROP CONSTRAINT IF EXISTS [FK_YearlyStudentAllocation_Student_StudentID]
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[YearlyStudentAllocation]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[YearlyStudentAllocation]
+    DROP CONSTRAINT IF EXISTS [FK_YearlyStudentAllocation_Student_StudentID]
+END
 GO
 
-ALTER TABLE [dbo].[YearlyUniversityAllocation]
-  DROP CONSTRAINT IF EXISTS [FK_YearlyUniversityAllocation_University_UniversityID]
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[YearlyUniversityAllocation]') AND type in (N'U'))
+BEGIN
+  ALTER TABLE [dbo].[YearlyUniversityAllocation]
+    DROP CONSTRAINT IF EXISTS [FK_YearlyUniversityAllocation_University_UniversityID]
+END
 GO
+
 -- This file contains SQL statements that will be executed before the build script.
 -- Write your own SQL object definition here, and it'll be included in your package.
 
