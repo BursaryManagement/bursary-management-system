@@ -1,6 +1,6 @@
 CREATE PROCEDURE [dbo].[uspCreateUniversityWithApplication]
   @UniversityName VARCHAR(100),
-  @AllocatedAmount MONEY
+  @Motivation TEXT
 AS
 BEGIN TRY
   BEGIN TRANSACTION
@@ -12,13 +12,13 @@ BEGIN TRY
     DECLARE @UniversityID INT = SCOPE_IDENTITY()
     SELECT @UniversityID = IDENT_CURRENT('University')
 
-    INSERT INTO [dbo].[YearlyUniversityAllocation] (
+    INSERT INTO [dbo].[UniversityApplication] (
       [UniversityID],
-      [AllocatedAmount],
-      [DateAllocated]
+      [Motivation],
+      [ApplicationDate]
     ) VALUES (
       @UniversityID,
-      @AllocatedAmount,
+      @Motivation,
       GETDATE()
     )
   COMMIT
