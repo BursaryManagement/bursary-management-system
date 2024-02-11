@@ -10,4 +10,5 @@ AS
     FROM [dbo].[StudentBursaryApplication]
     WHERE [ApplicationID] = @ApplicationID
     RETURN @StatusID
-END
+  END
+GO
