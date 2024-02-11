@@ -54,22 +54,22 @@ GO
 
 
 
-INSERT INTO dbo.Contact (ContactID, ContactNumber, Email)
+INSERT INTO dbo.Contact (ContactNumber, Email)
 VALUES
-(1, '0711234567', 'john.doe@gmail.com'),
-(2, '0712345678', 'jane.smith@gmail.com'),
-(3, '0713456789', 'michael.johnson@gmail.com'),
-(4, '0714567890', 'emily.williams@gmail.com'),
-(5, '0715678901', 'david.brown@gmail.com'),
-(6, '0716789012', 'olivia.jones@gmail.com'),
-(7, '0717890123', 'james.davis@gmail.com'),
-(8, '0718901234', 'sophia.taylor@gmail.com'),
-(9, '0719012345', 'benjamin.clark@gmail.com'),
-(10, '0710123456', 'emma.walker@gmail.com'),
-(11, '0711234567', 'william.hall@gmail.com'),
-(12, '0712345678', 'ava.lewis@gmail.com'),
-(13, '0713456789', 'alexander.harris@gmail.com'),
-(14, '0714567890', 'mia.miller@gmail.com');
+('0711234567', 'john.doe@gmail.com'),
+('0712345678', 'jane.smith@gmail.com'),
+('0713456789', 'michael.johnson@gmail.com'),
+('0714567890', 'emily.williams@gmail.com'),
+('0715678901', 'david.brown@gmail.com'),
+('0716789012', 'olivia.jones@gmail.com'),
+('0717890123', 'james.davis@gmail.com'),
+('0718901234', 'sophia.taylor@gmail.com'),
+('0719012345', 'benjamin.clark@gmail.com'),
+('0710123456', 'emma.walker@gmail.com'),
+('0711234567', 'william.hall@gmail.com'),
+('0712345678', 'ava.lewis@gmail.com'),
+('0713456789', 'alexander.harris@gmail.com'),
+('0714567890', 'mia.miller@gmail.com');
 GO
 
 INSERT INTO [dbo].[UserRole] ([Role]) 
