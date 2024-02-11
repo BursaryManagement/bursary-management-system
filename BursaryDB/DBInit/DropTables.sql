@@ -129,8 +129,6 @@ GO
 --causing issues
 
 
--- This file contains SQL statements that will be executed before the build script.
--- Write your own SQL object definition here, and it'll be included in your package.
 
 -- Write your own SQL object definition here, and it'll be included in your package.
 DROP TABLE IF EXISTS [dbo].[ApplicationStatus]
