@@ -120,6 +120,13 @@ BEGIN
     DROP CONSTRAINT IF EXISTS [FK_YearlyUniversityAllocation_University_UniversityID]
 END
 GO
+IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[YearlyUniversityAllocation]') AND type in (N'U'))
+BEGIN
+ ALTER TABLE [dbo].[YearlyUniversityAllocation]
+  DROP CONSTRAINT [FK_YearlyUniversityAllocation_University_UniversityID]
+END
+GO
+
 
 
 -- This file contains SQL statements that will be executed before the build script.
