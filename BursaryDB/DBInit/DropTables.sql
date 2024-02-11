@@ -120,9 +120,7 @@ BEGIN
     DROP CONSTRAINT IF EXISTS [FK_YearlyUniversityAllocation_University_UniversityID]
 END
 GO
-ALTER TABLE [dbo].[YearlyUniversityAllocation]
-    DROP CONSTRAINT IF EXISTS [CHK_YearlyUniversityAllocation_AllocatedAmount]
-GO
+
 
 -- This file contains SQL statements that will be executed before the build script.
 -- Write your own SQL object definition here, and it'll be included in your package.
