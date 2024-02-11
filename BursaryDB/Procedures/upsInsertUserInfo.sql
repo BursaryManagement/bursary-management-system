@@ -24,6 +24,5 @@ AS
     ,@UserRoleID
     ,@IsUserActive)
 
-  SELECT SCOPE_IDENTITY() as [UserID] FROM [dbo].[User]
-
+  RETURN SCOPE_IDENTITY()
 GO

@@ -11,6 +11,6 @@ AS
     @Email
   )
 
-  SELECT SCOPE_IDENTITY() AS [ContactID] FROM [dbo].[Contact]
+  RETURN SCOPE_IDENTITY()
   
 GO
