@@ -13,4 +13,4 @@ AS
 
   SELECT SCOPE_IDENTITY() AS [ContactID] FROM [dbo].[Contact]
   
-
+GO

@@ -26,3 +26,4 @@ AS
 
   SELECT SCOPE_IDENTITY() as [UserID] FROM [dbo].[User]
 
+GO
