@@ -19,8 +19,8 @@
     <PostDeploy Include="InsertData.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DBInit\DropConstraints.sql" />
-    <PreDeploy Include="DBInit\DropTables.sql" />
+    <None Include="DBInit\DropTables.sql" />
+    <PreDeploy Include="DBInit\DropConstraints.sql" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
