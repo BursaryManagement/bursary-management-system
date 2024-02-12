@@ -21,6 +21,7 @@
     <None Include="ScalarFunctions\udfGetUniversityRemainingAmount.sql" />
     <None Include="Procedures\uspAddStudentAllocationAmount.sql" />
     <None Include="Procedures\uspInsertStudentAllocation.sql" />
+    <None Include="Procedures\uspUpdateUniversityApplicationStatus.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="DBInit\DropTables.sql" />
