@@ -18,7 +18,7 @@ The table below lists the functionalities that each role player can perform on t
 ### Entity Relationship Diagram
 The ERD below demostrates the relationship that each role player has with other parts of the database and the relationship between data
 
-![bursary_management_system](https://github.com/BursaryManagement/bursary-management-system/assets/40816245/5e8e7117-50ad-4823-9a9d-2a53768d9187)
+![Bursary ](https://github.com/BursaryManagement/bursary-management-system/assets/40816245/c2bb314f-5b76-4bca-81f2-3af7fb1c610a)
 
 <br />
 
