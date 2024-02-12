@@ -8,5 +8,6 @@ AS
 
 	  SELECT @BursaryAmount = [dbo].[udfGetStudentBursaryAmount](@StudentID)
 
+		EXEC [dbo].[uspUpdateStudentApplicationStatus] @ApplicationID, 1
 	  EXEC [dbo].[uspAddStudentYearlyAllocation] @StudentID, @BursaryAmount
 GO
