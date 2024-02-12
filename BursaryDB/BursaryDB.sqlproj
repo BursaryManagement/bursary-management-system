@@ -16,6 +16,7 @@
     <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Procedures\uspUpdateStudentApplication.sql" />
     <PostDeploy Include="InsertData.sql" />
     <None Include="ScalarFunctions\udfGetUniversityRemainingAmount.sql" />
     <None Include="Procedures\uspAddStudentAllocationAmount.sql" />
