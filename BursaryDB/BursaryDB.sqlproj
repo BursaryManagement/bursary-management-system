@@ -19,6 +19,7 @@
     <PostDeploy Include="InsertData.sql" />
     <None Include="ScalarFunctions\udfGetUniversityRemainingAmount.sql" />
     <None Include="Procedures\uspAddStudentAllocationAmount.sql" />
+    <None Include="Procedures\uspInsertStudentYearlyAllocation.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="DBInit\DropTables.sql" />
