@@ -123,7 +123,7 @@ GO
 IF EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[YearlyUniversityAllocation]') AND type in (N'U'))
 BEGIN
  ALTER TABLE [dbo].[YearlyUniversityAllocation]
-  DROP CONSTRAINT  [CHK_YearlyUniversityAllocation_AllocatedAmount]
+  DROP CONSTRAINT IF EXISTS  [CHK_YearlyUniversityAllocation_AllocatedAmount]
 END
 GO
 --causing issues
