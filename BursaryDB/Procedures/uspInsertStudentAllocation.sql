@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[uspInsertStudentAllocation]
+CREATE PROCEDURE [dbo].[uspInsertStudentAllocation]
 	@ApplicationID INT
 AS
 	  DECLARE @StudentID INT
