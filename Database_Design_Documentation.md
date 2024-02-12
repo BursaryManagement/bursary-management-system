@@ -24,3 +24,40 @@ The ERD below demostrates the relationship that each role player has with other 
 
 ## Current Database functionalities
 Below are all the functionalities that can be performed on the database
+
+### Views
+
+| View Purpose | View Implementation |
+| :----------------- | :--- |
+| View All approved Students | `[dbo].[vApprovedStudents]` |
+| View All HODs, their respective institutions and departments | `[dbo].[vHeadOfDepartments]` |
+
+---
+
+### Table Valued Functions
+
+| Function Purpose | Function Implementation |
+| :----------------- | :--- |
+| Get Students' by their application status | `[dbo].[udfStudentApplicationStatus](@StatusID)` |
+
+---
+
+### Scalar Valued Functions
+
+| Function Purpose | Function Implementation |
+| :----------------- | :--- |
+| Check if the students' funds have been allocated for the current year | `[dbo].[udfCheckStudentAllocation](@StudentID)` |
+| Get application status name by ID | `[dbo].[udfGetStatusName](@StatusID)`|
+| Get an amount that a student has applied for | `[dbo].[udfGetStudentBursaryAmount](@StudentID)` |
+| Retrieve Student ID from application | `[dbo].[udfGetStudentIdFromApplication](@ApplicationID)` |
+| Get University's remaining funds for the year | `[dbo].[udfGetUniversityRemainingAmount](@UniversityID, @YearToCheck)` |
+
+### Stored Procedures
+
+| Procedure Purpose | Procedure Implementation |
+| :----------------- | :--- |
+| Insert Supporting Dicuments for a student's application | `[dbo].[uspCreateStudentBursaryDocuments] @ApplicationID,  @IdCopyLoc, @TranscriptLoc, @CurriculumVitaeLoc` |
+| Add student's application | `[dbo].[uspCreateStudentWithApplication] @FirstName, @LastName, @IDNumber, @GenderID, @ContactNumber, @Email, @UserRoleID, @AverageMark, @RaceID, @UniversityID, @DepartmentID, @ApplicationMotivation, @BursaryAmount`|
+| Add University Application | `[dbo].[uspCreateUniversityWithApplication] @UniversityName, @Motivation` |
+| Get error information| `[dbo].[uspGetErrorInfo]`|
+| Get University Application Status| `[dbo].[uspGetUniversityApplicationStatus]` |
