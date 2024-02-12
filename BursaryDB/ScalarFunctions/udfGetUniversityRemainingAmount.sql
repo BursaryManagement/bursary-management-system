@@ -1,4 +1,3 @@
--- This file contains SQL statements that will be executed after the build script.
 CREATE FUNCTION [dbo].[udfGetUniversityRemainingAmount]
 (
     @UniversityID INT,
@@ -7,9 +6,9 @@ CREATE FUNCTION [dbo].[udfGetUniversityRemainingAmount]
 RETURNS MONEY
 AS
 BEGIN
-    DECLARE @RemainingAmount MONEY
-    DECLARE @TotalAmountAllocated MONEY
-    DECLARE @TotalAmountAllocatedToStudents MONEY
+    DECLARE @RemainingAmount MONEY = 0;
+    DECLARE @TotalAmountAllocated MONEY = 0;
+    DECLARE @TotalAmountAllocatedToStudents MONEY = 0;
 
     SELECT @TotalAmountAllocated = [AllocatedAmount] 
     FROM 
@@ -19,7 +18,7 @@ BEGIN
         AND [UniversityID] = @UniversityID
 
 
-    SELECT @TotalAmountAllocatedToStudents = SUM([dbo].[YearlyStudentAllocation].[AllocatedAmount]) 
+    SELECT @TotalAmountAllocatedToStudents = @TotalAmountAllocatedToStudents +  [dbo].[YearlyStudentAllocation].[AllocatedAmount]
     FROM 
         [dbo].[YearlyStudentAllocation]
         INNER JOIN
